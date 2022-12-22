@@ -7,7 +7,6 @@ Future<Response> onRequest(RequestContext context) async {
   puppeteer.Browser? browser;
   try {
     browser = await puppeteer.puppeteer.launch(
-      headless: false,
       noSandboxFlag: true,
       slowMo: const Duration(milliseconds: 20),
       defaultViewport:
