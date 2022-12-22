@@ -8,9 +8,6 @@ Future<Response> onRequest(RequestContext context) async {
   try {
     browser = await puppeteer.puppeteer.launch(
       noSandboxFlag: true,
-      slowMo: const Duration(milliseconds: 20),
-      defaultViewport:
-          const puppeteer.DeviceViewport(width: 1920, height: 1080),
     );
     return Response();
   } catch (e) {
